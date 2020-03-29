@@ -55,13 +55,13 @@ export const styles = StyleSheet.create({
 
   titulo: {
     fontSize: 16,
-    marginTop: 20,
+    marginTop: 10,
     fontWeight: 'bold'
   },
 
   descricao: {
     fontSize: 13,
-    marginTop: 12,
+    marginTop: 10,
     color: '#737380'
   },
 
@@ -71,7 +71,7 @@ export const styles = StyleSheet.create({
 
   produto: {
     marginBottom: 20,
-    backgroundColor: '#DDD',
+    backgroundColor: '#FFF',
     borderRadius: 18
   },
 
@@ -81,7 +81,13 @@ export const styles = StyleSheet.create({
 
   produtoNome: {
     marginTop: -5,
+    fontSize: 16,
     lineHeight: 20
+  },
+  produtoDescricao: {
+    marginTop: 10,
+    fontSize: 13,
+    color: '#737380'
   },
 
   produtoAdicionar: {

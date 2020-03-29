@@ -35,8 +35,10 @@ export function Clientes() {
         style={styles.pessoasList}
         keyExtractor={item => String(item.nome)}
         showsVerticalScrollIndicator={false}
+        numColumns={2}
         renderItem={({ item }) => (
           <TouchableOpacity
+            key={item.nome}
             style={styles.card}
             onPress={() => navigateToProdutos(item)}
           >

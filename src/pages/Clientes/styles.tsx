@@ -15,13 +15,13 @@ export const styles = StyleSheet.create({
 
   titulo: {
     fontSize: 16,
-    marginTop: 40,
+    marginTop: 20,
     fontWeight: 'bold'
   },
 
   descricao: {
     fontSize: 13,
-    marginTop: 14,
+    marginTop: 10,
     color: '#737380'
   },
 
@@ -30,6 +30,8 @@ export const styles = StyleSheet.create({
   },
 
   card: {
+    width: '48%',
+    marginRight: 16,
     marginBottom: 16
   },
 

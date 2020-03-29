@@ -6,6 +6,7 @@ interface ICliente {
 
 interface IProduto {
   nome: string;
+  descricao: string;
   valor: number;
   foto: string;
 }

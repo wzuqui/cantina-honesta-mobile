@@ -80,10 +80,12 @@ export function Carrinho() {
       </View>
       <View style={styles.acoes}>
         <TouchableOpacity style={styles.button} onPress={navigateClientes}>
+          <Feather name='x' color='#FFF' />
           <Text style={styles.buttonText}>Cancelar</Text>
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.button} onPress={navigateConfirmar}>
+          <Feather name='mail' color='#FFF' />
           <Text style={styles.buttonText}>Confirmar</Text>
         </TouchableOpacity>
       </View>

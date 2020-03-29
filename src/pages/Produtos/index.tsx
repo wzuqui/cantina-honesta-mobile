@@ -111,6 +111,7 @@ export function Produtos() {
             />
             <View style={styles.produtoDetail}>
               <Text style={styles.produtoNome}>{item.nome}</Text>
+              <Text style={styles.produtoDescricao}>{item.descricao}</Text>
 
               <View style={styles.produtoAdicionar}>
                 <Text style={styles.produtoTexto}>
