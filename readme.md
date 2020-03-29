@@ -1,0 +1,54 @@
+- Não teremos nenhum FrontEnd, exceto o do próprio App
+
+- Funcionalidade de compra
+
+  - Tela Clientes (1a tela, principal)
+    - Deverá ter um carrossel, com as fotos das pessoas que podem comprar.
+    - Quem compra mais frequentemente, fica mais "encima" no carrossel.
+    - Clicou num rosto, é selecionado como "comprador", e vai para tela seguinte.
+  - Tela Produtos (2a tela)
+    - Deverá ter outro carrossel, com as fotos do produtos, descrição e valor unitário.
+    - Cada clique num produto, adiciona ele (ou caso já esteja no carrinho, adiciona mais uma quantidade) no carrinho.
+    - Deve ter um botão para ir para o checkout, e outro para cancelar a compra e voltar para tela principal
+  - Tela Checkout (3a tela)
+    - Deve mostrar os itens comprados
+    - Deve mostrar o valor total.
+    - Deve ter um botão para confirmar a compra, e outro para desistir/cancelar.
+  - Tela Administrativa
+    - Cadastro Empresa
+    - O app, após estar logado numa empresa, deve persistir logado
+    - Botão para Fechar Consumo
+
+- Demais funções / API / Backend
+  - O App deverá ter uma opção para ir para a parte administrativa do Sistema
+  - Cadastros
+    - Empresa
+      - Usuário/Senha para o app se logar nessa empresa
+      - Nome, Data Criação, Email Administrativo (ou emails, separados por ; )
+      - Dados do smtp para envio de emails
+    - Compradores
+      - Empresa, Nome, Foto, Ativo/Inativo, Data Criação, Data Desativação, email
+      - Inclusão com Foto (usando a camera do tablet)
+      - Desativar comprador
+    - Produtos
+      - Empresa, Nome, Foto, Ativo/Inativo, Data Criação, Data Desativação, Estoque Atual
+      - Inclusão com Foto
+      - Desativar produto
+    - Pedido
+      - Data/Hora da Compra
+      - Cliente
+      - Valor Total
+    - Itens dos Pedidos
+      - Pedido
+      - Produto
+      - Qtde
+      - Valor Unitário
+  - Envio de Email (via API)
+    - Assim que a compra for efetivada, deve ser enviado um email para o email Administrativo, e para o email do cliente/comprador, com os detalhes da compra
+      - Data/Hora da compra
+      - Itens comprados
+      - Valores unitários e totais.
+  - Fechar Consumo (via API)
+    - Deve enviar um email para cada comprador, e com cópia para o administrativo, o resumo da sua compra no período que foi solicitado fechamento.
+      - Pedido, Data/Hora Pedido, Qtde Itens, Valor Total
+      - Somatório Total das compras no período
