@@ -4,13 +4,13 @@ interface ICliente {
   foto: ImageSourcePropType;
 }
 
-interface IProduto {
+interface ICarrinho {
   nome: string;
   descricao: string;
   valor: number;
   foto: string;
 }
 
-interface ICarrinho extends IProduto {
+interface ICarrinho extends ICarrinho {
   quantidade: number;
 }

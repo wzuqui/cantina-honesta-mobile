@@ -18,15 +18,17 @@ export function Produtos() {
   const navigation = useNavigation();
   const route = useRoute();
 
+  const [produtos] = useState<ICarrinho[]>(data as ICarrinho[]);
+  const { cliente } = route.params as { cliente: ICliente };
   const [carrinho, setCarrinho] = useState<List<ICarrinho>>(
     new List<ICarrinho>()
   );
-  const [produtos] = useState<IProduto[]>(data);
-  const { cliente } = route.params as { cliente: ICliente };
+
+  console.log(`Cliente ${cliente.email} entrou na página de produtos`);
 
   const valorTotal = carrinho.Select(p => p.quantidade * p.valor).Sum();
 
-  async function adicionarCarrinho(produto: IProduto) {
+  async function adicionarCarrinho(produto: ICarrinho) {
     const novoCarrinho = carrinho.ToArray();
 
     let novoProduto = novoCarrinho.find(p => p.nome === produto.nome);

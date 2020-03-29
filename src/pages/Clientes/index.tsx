@@ -15,6 +15,8 @@ import { styles } from './styles';
 export function Clientes() {
   const navigation = useNavigation();
 
+  console.log(`Entrou na página de clientes`);
+
   function navigateToProdutos(cliente: ICliente) {
     navigation.navigate('Produtos', { cliente });
   }
